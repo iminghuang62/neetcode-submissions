@@ -1,0 +1,16 @@
+CREATE TABLE stocks (
+  id SERIAL PRIMARY KEY,
+  name TEXT,
+  transaction_dates DATE[]
+);
+
+-- Do not modify above this line --
+INSERT INTO stocks(name, transaction_dates)
+-- VALUES('AAPL', ARRAY['2007-02-09', '2007-02-10', '2007-02-11']::DATE[]),
+-- ('GOOG', ARRAY['2004-12-15', '2004-12-16']::DATE[]);
+VALUES('AAPL', ARRAY[DATE '2007-02-09', DATE '2007-02-10', DATE '2007-02-11']),
+('GOOG', ARRAY[DATE '2004-12-15', DATE'2004-12-16']);
+
+
+-- Do not modify below this line --
+SELECT * FROM stocks;
